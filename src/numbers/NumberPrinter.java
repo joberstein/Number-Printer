@@ -17,7 +17,8 @@ public class NumberPrinter {
 	public static void main(String args[]) {
 		NumberPrinter np = new NumberPrinter();
 		String input = np.parseInput(System.in);
-		System.out.println("\nYour number in writing:\n\t" + np.printNumber(input) + ".\n");
+		System.out.println("\nYour number in writing:\n\t" 
+							+ np.printNumber(input) + ".\n");
 	}
 	
 	public String parseInput(InputStream in) {
@@ -31,8 +32,9 @@ public class NumberPrinter {
 				break;
 			}
 			catch (InputMismatchException e) {
-				System.out.print("ERROR: It appears you have either not entered a number, your number is not whole, "
-						+ "or your number may be too long.\n\n");
+				System.out.print("ERROR: It appears you have either not entered"
+						+ " a number, your number is not whole, or your number"
+						+ " may be too long.\n\n");
 			}
 		}
 		scan.close();
@@ -89,7 +91,8 @@ public class NumberPrinter {
 		String result = "";
 		int trillionIndex = number.length() - 12;
 		result += parseBase(number.substring(0, trillionIndex));
-		result += parseCorrectBlankSuffix(number, TRILLION) + parseBillion(number.substring(trillionIndex)).trim();
+		result += parseCorrectBlankSuffix(number, TRILLION) 
+				+ parseBillion(number.substring(trillionIndex)).trim();
 		return result;
 	}
 	
@@ -97,7 +100,8 @@ public class NumberPrinter {
 		String result = "";
 		int billionIndex = number.length() - 9;
 		result += parseBase(number.substring(0, billionIndex));
-		result += parseCorrectBlankSuffix(number, BILLION) + parseMillion(number.substring(billionIndex)).trim();
+		result += parseCorrectBlankSuffix(number, BILLION) 
+				+ parseMillion(number.substring(billionIndex)).trim();
 		return result;
 	}
 	
@@ -105,7 +109,8 @@ public class NumberPrinter {
 		String result = "";
 		int millionIndex = number.length() - 6;
 		result += parseBase(number.substring(0, millionIndex));
-		result += parseCorrectBlankSuffix(number, MILLION) + parseThousand(number.substring(millionIndex)).trim();
+		result += parseCorrectBlankSuffix(number, MILLION) 
+				+ parseThousand(number.substring(millionIndex)).trim();
 		return result;
 	}
 
@@ -113,7 +118,8 @@ public class NumberPrinter {
 		String result = "";
 		int thousandIndex = number.length() - 3;
 		result += parseBase(number.substring(0, thousandIndex));
-		result += parseCorrectBlankSuffix(number, THOUSAND) + parseHundred(number.substring(thousandIndex)).trim();
+		result += parseCorrectBlankSuffix(number, THOUSAND) 
+				+ parseHundred(number.substring(thousandIndex)).trim();
 		return result;
 	}
 	
@@ -121,7 +127,8 @@ public class NumberPrinter {
 		String result = "";
 		int hundredsDigit = Integer.parseInt(number.substring(0, 1));
 		result += parseOnesOrTens(Integer.toString(hundredsDigit));
-		result += parseCorrectBlankSuffix(number, HUNDRED) + parseOnesOrTens(number.substring(1));
+		result += parseCorrectBlankSuffix(number, HUNDRED) 
+				+ parseOnesOrTens(number.substring(1));
 		return result;
 	}
 	
