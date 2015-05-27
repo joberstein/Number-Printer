@@ -1,4 +1,4 @@
-package NumberPrinter;
+package numbers;
 
 /*
  * A class containing all constant number values that needed to be hardcorded

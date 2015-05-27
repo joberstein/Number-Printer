@@ -1,8 +1,9 @@
-package NumberPrinter;
+package numbers;
 import java.io.InputStream;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import static NumberPrinter.NumberConstants.*;
+
+import static numbers.NumberConstants.*;
 
 /*
  * A class to print out a mathematical number in English words that is entered in by a user.
@@ -197,7 +198,7 @@ public class NumberPrinter {
 			case 9: result += determineOnesOrTensBehavior(number, isTwoDigits, NINE, NINETY);
 					integer = determineOnesNumber(number, isTwoDigits, 9);
 					break;
-			default: throw new RuntimeException("Cannot parse given ones or tens digit.");
+
 		}
 		
 		if (isTwoDigits) {
