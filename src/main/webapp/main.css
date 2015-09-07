@@ -1,0 +1,168 @@
+@CHARSET "UTF-8";
+
+
+h1, h2, h3, p, li, span {
+	font-family: Helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 5em;
+	margin-bottom: 1em;	
+}
+
+h2 {
+	font-size: 3em;
+	margin-bottom: .75em;
+}
+
+h3 {
+	font-size: 2.5em;
+	margin-bottom: .5em;
+}
+
+p {
+	font-size: 20px;
+}
+
+.center {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.top-space {
+	margin-top: 200px;
+}
+
+.bottom-space {
+	margin-bottom: 20px;
+}
+
+.result-body, .convert-button {
+	background-color: #297ACC;
+}
+
+/***********************
+  Index.jsp
+***********************/
+.half-width {
+	display: block;
+	width: 47%;
+	float: left;
+}
+
+p.half-width {
+	font-size: 12px;
+	text-transform: uppercase;
+	margin: 0 auto 40px;
+	padding: 0;
+}
+
+.decimal-width {
+	display: block;
+	width: 5%;
+	float: left;
+	font-size: 25px;
+	padding-top: 15px;
+}
+
+.number-form {
+	width: 500px;
+}
+
+input[type=text], textarea {
+  font-size: 20px;
+  outline: none;
+  margin: 5px 1px 20px 0px;
+  border: 1px solid #BBB;
+  padding: 5px 5px 10px;
+  -webkit-transition: all 0.20s ease-in-out;
+  -moz-transition: all 0.20s ease-in-out;
+  -ms-transition: all 0.20s ease-in-out;
+  -o-transition: all 0.20s ease-in-out;
+}
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.text-right {
+	text-align: right;
+}
+
+.convert-button {
+	padding: 20px;
+	font-family: Helvetica, sans-serif;
+	color: #FFF;
+	font-size: 1.25em;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	border: none;
+}
+
+.convert-button:hover {
+	background-color: #5495D6;
+	cursor: pointer;
+}
+
+.tooltip {
+	width: 50%;
+	margin: 30px 0;
+	background-color: #FFF;
+	border: 1px solid #5495D6;
+}
+
+.tooltip-text {
+	font-size: 13px;
+	text-transform: uppercase;
+	padding: 10px;
+	color: #C33;
+}
+
+/***********************
+  Main.jsp
+***********************/
+.boxes {
+	width: 60%;
+}
+
+.box-frame {
+	background-color: #333;
+	border-bottom: 1px solid #297ACC;
+}
+
+.box-frame:hover {
+	background-color: #444;
+}
+
+.box-frame-text {
+	margin: 0;
+	color: #FFF;	
+	text-transform: uppercase;
+	padding: 10px 0 5px 10px;
+	letter-spacing: 5px;
+	float: left;
+	width: 95%;
+}
+
+.expand, .collapse {
+	color: #FFF;
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 30px;
+}
+
+.expand:hover, .collapse:hover, .box-frame:hover {
+	cursor: pointer;
+}
+
+.result-text {
+	color: #FFF;
+	font-size: 2em;
+	padding: 20px 40px;
+	margin: 0;
+}
+
+.collapsed {
+	display: none;
+}
